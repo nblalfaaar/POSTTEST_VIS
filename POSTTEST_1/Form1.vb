@@ -71,7 +71,7 @@
         Dim jumlah As Integer = listIP.Count
 
         If jumlah = 0 Then
-            lblNilaiIPK.Text = "-"
+            txtNilaiIPK.Text = "-"
             lblPredikat.Text = "Belum ada data"
             Return
         End If
@@ -84,18 +84,18 @@
         Dim ipk As Double = total / jumlah
 
         ' Tampilkan IPK
-        lblNilaiIPK.Text = ipk.ToString("0.00")
+        txtNilaiIPK.Text = ipk.ToString("0.00")
 
-        ' Tentukan predikat
-        If ipk >= 2.0 And ipk <= 2.75 Then
-            lblPredikat.Text = "Cukup"
-        ElseIf ipk > 2.75 And ipk <= 3.0 Then
-            lblPredikat.Text = "Memuaskan"
-        ElseIf ipk > 3.0 Then
-            lblPredikat.Text = "Sangat Memuaskan"
-        Else
-            lblPredikat.Text = "Di Bawah Standar"
-        End If
+		' Tentukan predikat
+		If ipk >= 2.0 And ipk <= 2.75 Then
+			lblPredikat.Text = "Cukup"
+		ElseIf ipk > 2.75 And ipk <= 3.0 Then
+			lblPredikat.Text = "Memuaskan"
+		ElseIf ipk > 3.0 Then
+			lblPredikat.Text = "Sangat Memuaskan"
+		Else
+			lblPredikat.Text = "Di Bawah Standar"   ' Tambahan untuk IPK di bawah 2.0
+		End If
 
     End Sub
 

@@ -28,8 +28,8 @@ Partial Class Form1
 		btnTambah = New Button()
 		btnReset = New Button()
 		panelIPK = New Panel()
+		txtNilaiIPK = New TextBox()
 		lblPredikat = New Label()
-		lblNilaiIPK = New Label()
 		lblIPK = New Label()
 		panelIPK.SuspendLayout()
 		SuspendLayout()
@@ -103,13 +103,24 @@ Partial Class Form1
 		' 
 		panelIPK.BackColor = Color.FromArgb(CByte(15), CByte(52), CByte(96))
 		panelIPK.BorderStyle = BorderStyle.FixedSingle
+		panelIPK.Controls.Add(txtNilaiIPK)
 		panelIPK.Controls.Add(lblPredikat)
-		panelIPK.Controls.Add(lblNilaiIPK)
 		panelIPK.Controls.Add(lblIPK)
 		panelIPK.Location = New Point(12, 234)
 		panelIPK.Name = "panelIPK"
 		panelIPK.Size = New Size(458, 225)
 		panelIPK.TabIndex = 5
+		' 
+		' txtNilaiIPK
+		' 
+		txtNilaiIPK.BackColor = Color.FromArgb(CByte(26), CByte(26), CByte(46))
+		txtNilaiIPK.Font = New Font("Comic Sans MS", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		txtNilaiIPK.ForeColor = Color.FromArgb(CByte(79), CByte(255), CByte(176))
+		txtNilaiIPK.Location = New Point(14, 40)
+		txtNilaiIPK.Name = "txtNilaiIPK"
+		txtNilaiIPK.ReadOnly = True
+		txtNilaiIPK.Size = New Size(163, 91)
+		txtNilaiIPK.TabIndex = 3
 		' 
 		' lblPredikat
 		' 
@@ -122,18 +133,6 @@ Partial Class Form1
 		lblPredikat.Size = New Size(124, 21)
 		lblPredikat.TabIndex = 2
 		lblPredikat.Text = "Belum ada data"
-		' 
-		' lblNilaiIPK
-		' 
-		lblNilaiIPK.AutoSize = True
-		lblNilaiIPK.BackColor = Color.Transparent
-		lblNilaiIPK.Font = New Font("Comic Sans MS", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-		lblNilaiIPK.ForeColor = Color.FromArgb(CByte(79), CByte(255), CByte(176))
-		lblNilaiIPK.Location = New Point(14, 37)
-		lblNilaiIPK.Name = "lblNilaiIPK"
-		lblNilaiIPK.Size = New Size(88, 84)
-		lblNilaiIPK.TabIndex = 1
-		lblNilaiIPK.Text = "—"
 		' 
 		' lblIPK
 		' 
@@ -178,7 +177,7 @@ Partial Class Form1
 	Friend WithEvents btnReset As Button
 	Friend WithEvents panelIPK As Panel
 	Friend WithEvents lblIPK As Label
-	Friend WithEvents lblNilaiIPK As Label
 	Friend WithEvents lblPredikat As Label
+	Friend WithEvents txtNilaiIPK As TextBox
 
 End Class

@@ -4,7 +4,6 @@
     Public daftarGenre(99) As String
     Public jumlahBuku As Integer = 0
 
-    ' fungsi validasi input
     Public Function ValidasiInput(ByVal judul As String, ByVal genre As String) As Boolean
         If judul = "" OrElse genre = "" Then
             Return False
@@ -12,7 +11,6 @@
         Return True
     End Function
 
-    ' prosedur tambah buku yang ByVal
     Public Sub TambahBuku(ByVal judul As String, ByVal genre As String)
         If jumlahBuku < 100 Then
             daftarJudul(jumlahBuku) = judul
@@ -21,7 +19,6 @@
         End If
     End Sub
 
-    ' prosedur hapus buku yang ByRef
     Public Sub HapusBuku(ByVal judulCari As String, ByRef berhasil As Boolean)
         berhasil = False
         For i As Integer = 0 To jumlahBuku - 1

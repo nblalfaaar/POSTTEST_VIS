@@ -32,7 +32,7 @@ Public Class Form1
             DataModule.Alamat = txtAlamat.Text
             DataModule.JK = GetSelectedRadioButton(grupJK)
             DataModule.Hobi = GetSelectedCheckBox(grupHobi)
-            DataModule.Tglahir = dtpLahir.Value.ToString("dd/MM/yyyy")
+            DataModule.Tglahir = dtpLahir.Value
 
             Form2.Show()
         End If

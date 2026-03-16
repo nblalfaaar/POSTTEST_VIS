@@ -7,7 +7,7 @@
     Public JK As String
     Public Hobi As String
     Public Foto As String
-    Public Tglahir As String
+    Public Tglahir As Date
 
     Public Function GetSelectedRadioButton(grupRadio() As RadioButton) As String
         For Each rb As RadioButton In grupRadio

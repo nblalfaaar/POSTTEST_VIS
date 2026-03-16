@@ -59,5 +59,15 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property IMGBIN_com___Download_Transparent_PNG_Images__For_Free_removebg_preview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IMGBIN_com_-_Download_Transparent_PNG_Images__For_Free-removebg-preview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace

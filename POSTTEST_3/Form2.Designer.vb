@@ -23,8 +23,11 @@ Partial Class Form2
 	<System.Diagnostics.DebuggerStepThrough()> _
 	Private Sub InitializeComponent()
 		pnlHeader = New Panel()
+		Label4 = New Label()
+		Label1 = New Label()
 		Panel1 = New Panel()
 		pnlFooter = New Panel()
+		Label2 = New Label()
 		PictureBox1 = New PictureBox()
 		lblKeyNama = New Label()
 		lblKeyUmur = New Label()
@@ -40,23 +43,48 @@ Partial Class Form2
 		lblTelpon = New Label()
 		lblHobi = New Label()
 		lblAlamat = New Label()
-		Label1 = New Label()
-		Label2 = New Label()
+		PictureBox2 = New PictureBox()
 		pnlHeader.SuspendLayout()
 		pnlFooter.SuspendLayout()
 		CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+		CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
 		SuspendLayout()
 		' 
 		' pnlHeader
 		' 
-		pnlHeader.BackColor = Color.FromArgb(CByte(13), CByte(27), CByte(75))
+		pnlHeader.BackColor = Color.FromArgb(CByte(15), CByte(15), CByte(35))
+		pnlHeader.Controls.Add(Label4)
 		pnlHeader.Controls.Add(Label1)
 		pnlHeader.Controls.Add(Panel1)
 		pnlHeader.Dock = DockStyle.Top
 		pnlHeader.Location = New Point(0, 0)
 		pnlHeader.Name = "pnlHeader"
-		pnlHeader.Size = New Size(482, 55)
+		pnlHeader.Size = New Size(582, 65)
 		pnlHeader.TabIndex = 0
+		' 
+		' Label4
+		' 
+		Label4.AutoSize = True
+		Label4.BackColor = Color.Transparent
+		Label4.ForeColor = Color.FromArgb(CByte(155), CByte(114), CByte(207))
+		Label4.Location = New Point(231, 35)
+		Label4.Name = "Label4"
+		Label4.Size = New Size(98, 17)
+		Label4.TabIndex = 17
+		Label4.Text = "Member Card"
+		' 
+		' Label1
+		' 
+		Label1.AutoSize = True
+		Label1.BackColor = Color.Transparent
+		Label1.Font = New Font("Calisto MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		Label1.ForeColor = Color.FromArgb(CByte(232), CByte(213), CByte(245))
+		Label1.Location = New Point(178, 9)
+		Label1.Name = "Label1"
+		Label1.Size = New Size(213, 26)
+		Label1.TabIndex = 2
+		Label1.Text = "Spotify Community"
+		Label1.TextAlign = ContentAlignment.MiddleCenter
 		' 
 		' Panel1
 		' 
@@ -64,18 +92,31 @@ Partial Class Form2
 		Panel1.Dock = DockStyle.Top
 		Panel1.Location = New Point(0, 0)
 		Panel1.Name = "Panel1"
-		Panel1.Size = New Size(482, 0)
+		Panel1.Size = New Size(582, 0)
 		Panel1.TabIndex = 1
 		' 
 		' pnlFooter
 		' 
-		pnlFooter.BackColor = Color.FromArgb(CByte(245), CByte(197), CByte(24))
+		pnlFooter.BackColor = Color.FromArgb(CByte(15), CByte(15), CByte(35))
 		pnlFooter.Controls.Add(Label2)
 		pnlFooter.Dock = DockStyle.Bottom
-		pnlFooter.Location = New Point(0, 275)
+		pnlFooter.Location = New Point(0, 313)
 		pnlFooter.Name = "pnlFooter"
-		pnlFooter.Size = New Size(482, 38)
+		pnlFooter.Size = New Size(582, 55)
 		pnlFooter.TabIndex = 1
+		' 
+		' Label2
+		' 
+		Label2.AutoSize = True
+		Label2.BackColor = Color.Transparent
+		Label2.Font = New Font("Calisto MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		Label2.ForeColor = Color.FromArgb(CByte(155), CByte(114), CByte(207))
+		Label2.Location = New Point(178, 13)
+		Label2.Name = "Label2"
+		Label2.Size = New Size(215, 22)
+		Label2.TabIndex = 3
+		Label2.Text = "Member Identification"
+		Label2.TextAlign = ContentAlignment.MiddleCenter
 		' 
 		' PictureBox1
 		' 
@@ -83,7 +124,7 @@ Partial Class Form2
 		PictureBox1.BorderStyle = BorderStyle.FixedSingle
 		PictureBox1.Location = New Point(18, 68)
 		PictureBox1.Name = "PictureBox1"
-		PictureBox1.Size = New Size(90, 110)
+		PictureBox1.Size = New Size(90, 120)
 		PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
 		PictureBox1.TabIndex = 2
 		PictureBox1.TabStop = False
@@ -166,7 +207,7 @@ Partial Class Form2
 		lblKeyAlamat.BackColor = Color.Transparent
 		lblKeyAlamat.Font = New Font("Calisto MT", 9F, FontStyle.Bold)
 		lblKeyAlamat.ForeColor = Color.FromArgb(CByte(184), CByte(204), CByte(244))
-		lblKeyAlamat.Location = New Point(125, 200)
+		lblKeyAlamat.Location = New Point(125, 250)
 		lblKeyAlamat.Name = "lblKeyAlamat"
 		lblKeyAlamat.Size = New Size(62, 18)
 		lblKeyAlamat.TabIndex = 9
@@ -229,58 +270,42 @@ Partial Class Form2
 		' 
 		' lblHobi
 		' 
-		lblHobi.AutoSize = True
 		lblHobi.BackColor = Color.Transparent
 		lblHobi.Font = New Font("Calisto MT", 9F, FontStyle.Bold)
 		lblHobi.ForeColor = Color.White
 		lblHobi.Location = New Point(240, 178)
 		lblHobi.Name = "lblHobi"
-		lblHobi.Size = New Size(0, 18)
+		lblHobi.Size = New Size(320, 65)
 		lblHobi.TabIndex = 15
 		' 
 		' lblAlamat
 		' 
-		lblAlamat.AutoSize = True
 		lblAlamat.BackColor = Color.Transparent
 		lblAlamat.Font = New Font("Calisto MT", 9F, FontStyle.Bold)
 		lblAlamat.ForeColor = Color.White
-		lblAlamat.Location = New Point(240, 200)
+		lblAlamat.Location = New Point(240, 247)
 		lblAlamat.Name = "lblAlamat"
-		lblAlamat.Size = New Size(0, 18)
+		lblAlamat.Size = New Size(320, 36)
 		lblAlamat.TabIndex = 16
 		' 
-		' Label1
+		' PictureBox2
 		' 
-		Label1.AutoSize = True
-		Label1.BackColor = Color.Transparent
-		Label1.Font = New Font("Calisto MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-		Label1.ForeColor = Color.White
-		Label1.Location = New Point(101, 9)
-		Label1.Name = "Label1"
-		Label1.Size = New Size(273, 26)
-		Label1.TabIndex = 2
-		Label1.Text = "Universitas Mulawarman"
-		Label1.TextAlign = ContentAlignment.MiddleCenter
-		' 
-		' Label2
-		' 
-		Label2.AutoSize = True
-		Label2.BackColor = Color.Transparent
-		Label2.Font = New Font("Calisto MT", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-		Label2.ForeColor = Color.FromArgb(CByte(13), CByte(27), CByte(75))
-		Label2.Location = New Point(164, 7)
-		Label2.Name = "Label2"
-		Label2.Size = New Size(146, 22)
-		Label2.TabIndex = 3
-		Label2.Text = "Kartu Identitas"
-		Label2.TextAlign = ContentAlignment.MiddleCenter
+		PictureBox2.BackColor = Color.Transparent
+		PictureBox2.Image = My.Resources.Resources.IMGBIN_com___Download_Transparent_PNG_Images__For_Free_removebg_preview
+		PictureBox2.Location = New Point(445, 81)
+		PictureBox2.Name = "PictureBox2"
+		PictureBox2.Size = New Size(115, 81)
+		PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+		PictureBox2.TabIndex = 17
+		PictureBox2.TabStop = False
 		' 
 		' Form2
 		' 
 		AutoScaleDimensions = New SizeF(9F, 17F)
 		AutoScaleMode = AutoScaleMode.Font
-		BackColor = Color.FromArgb(CByte(26), CByte(58), CByte(143))
-		ClientSize = New Size(482, 313)
+		BackColor = Color.FromArgb(CByte(22), CByte(33), CByte(62))
+		ClientSize = New Size(582, 368)
+		Controls.Add(PictureBox2)
 		Controls.Add(lblAlamat)
 		Controls.Add(lblHobi)
 		Controls.Add(lblTelpon)
@@ -308,6 +333,7 @@ Partial Class Form2
 		pnlFooter.ResumeLayout(False)
 		pnlFooter.PerformLayout()
 		CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+		CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
 		ResumeLayout(False)
 		PerformLayout()
 	End Sub
@@ -333,4 +359,6 @@ Partial Class Form2
 	Friend WithEvents lblAlamat As Label
 	Friend WithEvents Label1 As Label
 	Friend WithEvents Label2 As Label
+	Friend WithEvents Label4 As Label
+	Friend WithEvents PictureBox2 As PictureBox
 End Class

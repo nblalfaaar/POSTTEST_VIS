@@ -232,7 +232,7 @@
 		End If
 
 		Dim konfirmasi As DialogResult = MessageBox.Show(
-			"Simpan dan tampilkan kartu anggota?",
+			"Simpan ke memori dan tampilkan kartu anggota?",
 			"Konfirmasi Cetak Kartu",
 			MessageBoxButtons.YesNoCancel,
 			MessageBoxIcon.Question

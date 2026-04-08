@@ -27,6 +27,9 @@ Partial Class FormKartu
 		lblJudulForm = New Label()
 		lblSubForm = New Label()
 		pnlKartu = New Panel()
+		pnlBadge = New Panel()
+		lblPeran = New Label()
+		lblKontakTitle = New Label()
 		picIkonEmail = New PictureBox()
 		picIkonTelepon = New PictureBox()
 		lblHobby = New Label()
@@ -40,11 +43,13 @@ Partial Class FormKartu
 		lblNama = New Label()
 		picFotoKartu = New PictureBox()
 		pnlAksen = New Panel()
-		lblKontakTitle = New Label()
+		Panel1 = New Panel()
 		pnlKartu.SuspendLayout()
+		pnlBadge.SuspendLayout()
 		CType(picIkonEmail, ISupportInitialize).BeginInit()
 		CType(picIkonTelepon, ISupportInitialize).BeginInit()
 		CType(picFotoKartu, ISupportInitialize).BeginInit()
+		pnlAksen.SuspendLayout()
 		SuspendLayout()
 		' 
 		' lblJudulForm
@@ -72,6 +77,7 @@ Partial Class FormKartu
 		' pnlKartu
 		' 
 		pnlKartu.BackColor = Color.FromArgb(CByte(30), CByte(58), CByte(95))
+		pnlKartu.Controls.Add(pnlBadge)
 		pnlKartu.Controls.Add(lblKontakTitle)
 		pnlKartu.Controls.Add(picIkonEmail)
 		pnlKartu.Controls.Add(picIkonTelepon)
@@ -90,6 +96,37 @@ Partial Class FormKartu
 		pnlKartu.Name = "pnlKartu"
 		pnlKartu.Size = New Size(444, 353)
 		pnlKartu.TabIndex = 2
+		' 
+		' pnlBadge
+		' 
+		pnlBadge.BackColor = Color.FromArgb(CByte(74), CByte(144), CByte(217))
+		pnlBadge.Controls.Add(lblPeran)
+		pnlBadge.Location = New Point(264, 146)
+		pnlBadge.Name = "pnlBadge"
+		pnlBadge.Size = New Size(162, 39)
+		pnlBadge.TabIndex = 19
+		' 
+		' lblPeran
+		' 
+		lblPeran.Font = New Font("Calisto MT", 10.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+		lblPeran.ForeColor = Color.White
+		lblPeran.Location = New Point(1, 14)
+		lblPeran.Name = "lblPeran"
+		lblPeran.Size = New Size(158, 25)
+		lblPeran.TabIndex = 18
+		lblPeran.Text = "Peran :"
+		lblPeran.TextAlign = ContentAlignment.MiddleCenter
+		' 
+		' lblKontakTitle
+		' 
+		lblKontakTitle.AutoSize = True
+		lblKontakTitle.Font = New Font("Calisto MT", 8.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+		lblKontakTitle.ForeColor = Color.FromArgb(CByte(159), CByte(200), CByte(240))
+		lblKontakTitle.Location = New Point(42, 140)
+		lblKontakTitle.Name = "lblKontakTitle"
+		lblKontakTitle.Size = New Size(56, 16)
+		lblKontakTitle.TabIndex = 17
+		lblKontakTitle.Text = "Kontak:"
 		' 
 		' picIkonEmail
 		' 
@@ -164,7 +201,7 @@ Partial Class FormKartu
 		pnlGaris.BackColor = Color.FromArgb(CByte(55), CByte(90), CByte(150))
 		pnlGaris.Location = New Point(14, 132)
 		pnlGaris.Name = "pnlGaris"
-		pnlGaris.Size = New Size(432, 1)
+		pnlGaris.Size = New Size(412, 1)
 		pnlGaris.TabIndex = 6
 		' 
 		' lblKomunitas
@@ -213,21 +250,19 @@ Partial Class FormKartu
 		' pnlAksen
 		' 
 		pnlAksen.BackColor = Color.FromArgb(CByte(74), CByte(144), CByte(217))
+		pnlAksen.Controls.Add(Panel1)
 		pnlAksen.Location = New Point(0, 0)
 		pnlAksen.Name = "pnlAksen"
 		pnlAksen.Size = New Size(444, 6)
 		pnlAksen.TabIndex = 0
 		' 
-		' lblKontakTitle
+		' Panel1
 		' 
-		lblKontakTitle.AutoSize = True
-		lblKontakTitle.Font = New Font("Calisto MT", 8.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-		lblKontakTitle.ForeColor = Color.FromArgb(CByte(159), CByte(200), CByte(240))
-		lblKontakTitle.Location = New Point(42, 140)
-		lblKontakTitle.Name = "lblKontakTitle"
-		lblKontakTitle.Size = New Size(56, 16)
-		lblKontakTitle.TabIndex = 17
-		lblKontakTitle.Text = "Kontak:"
+		Panel1.BackColor = Color.FromArgb(CByte(74), CByte(144), CByte(217))
+		Panel1.Location = New Point(0, 0)
+		Panel1.Name = "Panel1"
+		Panel1.Size = New Size(444, 6)
+		Panel1.TabIndex = 1
 		' 
 		' FormKartu
 		' 
@@ -244,9 +279,11 @@ Partial Class FormKartu
 		Text = "Kartu Anggota — SpotifyKu"
 		pnlKartu.ResumeLayout(False)
 		pnlKartu.PerformLayout()
+		pnlBadge.ResumeLayout(False)
 		CType(picIkonEmail, ISupportInitialize).EndInit()
 		CType(picIkonTelepon, ISupportInitialize).EndInit()
 		CType(picFotoKartu, ISupportInitialize).EndInit()
+		pnlAksen.ResumeLayout(False)
 		ResumeLayout(False)
 		PerformLayout()
 	End Sub
@@ -268,4 +305,7 @@ Partial Class FormKartu
 	Friend WithEvents picIkonTelepon As PictureBox
 	Friend WithEvents picIkonEmail As PictureBox
 	Friend WithEvents lblKontakTitle As Label
+	Friend WithEvents pnlBadge As Panel
+	Friend WithEvents lblPeran As Label
+	Friend WithEvents Panel1 As Panel
 End Class

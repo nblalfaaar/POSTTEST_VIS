@@ -14,6 +14,7 @@
 		lblNama.Text = AmbilNilai(d, "Nama")
 		lblId.Text = AmbilNilai(d, "IDAnggota")
 		lblKomunitas.Text = AmbilNilai(d, "Komunitas")
+		lblPeran.Text = AmbilNilai(d, "Peran")
 		lblTelepon.Text = AmbilNilai(d, "Telepon")
 		lblEmail.Text = AmbilNilai(d, "Email")
 		lblHobby.Text = AmbilNilai(d, "Hobbies")
